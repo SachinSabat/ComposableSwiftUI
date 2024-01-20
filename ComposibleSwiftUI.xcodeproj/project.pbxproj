@@ -14,6 +14,7 @@
 		893E3C882B5BF066000D8874 /* ComposibleSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3C872B5BF066000D8874 /* ComposibleSwiftUITests.swift */; };
 		893E3C922B5BF066000D8874 /* ComposibleSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3C912B5BF066000D8874 /* ComposibleSwiftUIUITests.swift */; };
 		893E3C942B5BF066000D8874 /* ComposibleSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3C932B5BF066000D8874 /* ComposibleSwiftUIUITestsLaunchTests.swift */; };
+		893E3CA22B5BF54F000D8874 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3CA12B5BF54F000D8874 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		893E3C8D2B5BF066000D8874 /* ComposibleSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposibleSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		893E3C912B5BF066000D8874 /* ComposibleSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposibleSwiftUIUITests.swift; sourceTree = "<group>"; };
 		893E3C932B5BF066000D8874 /* ComposibleSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposibleSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		893E3CA12B5BF54F000D8874 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		893E3C752B5BF064000D8874 /* ComposibleSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				893E3CA02B5BF541000D8874 /* Store */,
 				893E3C762B5BF064000D8874 /* ComposibleSwiftUIApp.swift */,
 				893E3C782B5BF064000D8874 /* ContentView.swift */,
 				893E3C7A2B5BF066000D8874 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				893E3C932B5BF066000D8874 /* ComposibleSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = ComposibleSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		893E3CA02B5BF541000D8874 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				893E3CA12B5BF54F000D8874 /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893E3CA22B5BF54F000D8874 /* Store.swift in Sources */,
 				893E3C792B5BF064000D8874 /* ContentView.swift in Sources */,
 				893E3C772B5BF064000D8874 /* ComposibleSwiftUIApp.swift in Sources */,
 			);

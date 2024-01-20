@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ComposibleSwiftUIApp: App {
+    let store = Store(reducer: reducer)
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(store)
         }
     }
 }
