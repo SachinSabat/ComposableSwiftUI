@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct ComposibleSwiftUIApp: App {
-    let store = Store(reducer: reducer)
 
     var body: some Scene {
+        let store = Store(reducer: appReducer, state: AppState())
+
         WindowGroup {
             ContentView().environmentObject(store)
         }
