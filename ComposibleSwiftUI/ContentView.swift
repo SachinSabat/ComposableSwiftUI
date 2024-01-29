@@ -37,9 +37,11 @@ struct ContentView: View {
 
             Text("\(props.counter)")
                 .padding()
+            
             Button("Increment") {
                 props.onIncrement()
             }
+
             Button("Decrement") {
                 props.onDecrement()
             }

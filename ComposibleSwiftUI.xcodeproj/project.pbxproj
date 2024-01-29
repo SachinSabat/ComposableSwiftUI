@@ -11,6 +11,7 @@
 		891B9F902B666A44003E8BE8 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B9F8F2B666A44003E8BE8 /* CounterReducer.swift */; };
 		891B9F922B666A56003E8BE8 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B9F912B666A56003E8BE8 /* AppReducer.swift */; };
 		891B9F942B666A65003E8BE8 /* TaskReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B9F932B666A65003E8BE8 /* TaskReducer.swift */; };
+		891B9F972B67951B003E8BE8 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B9F962B67951B003E8BE8 /* LogMiddleware.swift */; };
 		893E3C772B5BF064000D8874 /* ComposibleSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3C762B5BF064000D8874 /* ComposibleSwiftUIApp.swift */; };
 		893E3C792B5BF064000D8874 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E3C782B5BF064000D8874 /* ContentView.swift */; };
 		893E3C7B2B5BF066000D8874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893E3C7A2B5BF066000D8874 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		891B9F8F2B666A44003E8BE8 /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		891B9F912B666A56003E8BE8 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		891B9F932B666A65003E8BE8 /* TaskReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReducer.swift; sourceTree = "<group>"; };
+		891B9F962B67951B003E8BE8 /* LogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		893E3C732B5BF064000D8874 /* ComposibleSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposibleSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		893E3C762B5BF064000D8874 /* ComposibleSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposibleSwiftUIApp.swift; sourceTree = "<group>"; };
 		893E3C782B5BF064000D8874 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 				891B9F932B666A65003E8BE8 /* TaskReducer.swift */,
 			);
 			path = Reducer;
+			sourceTree = "<group>";
+		};
+		891B9F952B679507003E8BE8 /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				891B9F962B67951B003E8BE8 /* LogMiddleware.swift */,
+			);
+			path = Middleware;
 			sourceTree = "<group>";
 		};
 		893E3C6A2B5BF064000D8874 = {
@@ -160,6 +170,7 @@
 		893E3CA02B5BF541000D8874 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				891B9F952B679507003E8BE8 /* Middleware */,
 				891B9F8E2B666A16003E8BE8 /* Reducer */,
 				893E3CA12B5BF54F000D8874 /* Store.swift */,
 			);
@@ -302,6 +313,7 @@
 				893E3CA22B5BF54F000D8874 /* Store.swift in Sources */,
 				891B9F942B666A65003E8BE8 /* TaskReducer.swift in Sources */,
 				893E3C792B5BF064000D8874 /* ContentView.swift in Sources */,
+				891B9F972B67951B003E8BE8 /* LogMiddleware.swift in Sources */,
 				893E3C772B5BF064000D8874 /* ComposibleSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
