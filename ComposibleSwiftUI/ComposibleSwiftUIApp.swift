@@ -11,10 +11,14 @@ import SwiftUI
 struct ComposibleSwiftUIApp: App {
 
     var body: some Scene {
-        let store = Store(reducer: appReducer, state: AppState(),
-                          middlewares: [logMiddleware()])
+
+        let store = Store(reducer: appReducer, 
+                          state: AppState(),
+                          middlewares: [moviesMiddleware()])
+
         WindowGroup {
             ContentView().environmentObject(store)
         }
     }
 }
+

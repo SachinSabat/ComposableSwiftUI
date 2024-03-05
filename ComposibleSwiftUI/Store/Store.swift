@@ -7,6 +7,8 @@
 
 import Foundation
 
+import Foundation
+
 typealias Dispatcher = (Action) -> Void
 
 typealias Reducer<State: ReduxState> = (_ state: State, _ action: Action) -> State
@@ -15,29 +17,21 @@ typealias Middleware<StoreState: ReduxState> = (StoreState, Action, @escaping Di
 protocol ReduxState { }
 
 struct AppState: ReduxState {
-    var counterState = CounterState()
-    var taskState = TaskState()
+   var movies = MoviesState()
 }
 
-struct TaskState: ReduxState {
-    var tasks: [Task] = [Task]()
-}
-
-struct CounterState: ReduxState {
-    var counter = 0
+struct MoviesState: ReduxState {
+    var movies = [Movie]()
 }
 
 protocol Action { }
 
-struct IncrementAction: Action { }
-struct DecrementAction: Action { }
-struct AddTaskAction: Action {
-    let task: Task
+struct FetchMovies: Action {
+    let search: String
 }
 
-
-struct AddAction: Action {
-    let value: Int
+struct SetMovies: Action {
+    let movies: [Movie]
 }
 
 class Store<StoreState: ReduxState>: ObservableObject {
@@ -65,4 +59,3 @@ class Store<StoreState: ReduxState>: ObservableObject {
     }
 
 }
-
