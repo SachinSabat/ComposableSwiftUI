@@ -12,12 +12,10 @@ struct ComposibleSwiftUIApp: App {
 
     var body: some Scene {
 
-        let store = Store(reducer: appReducer, 
-                          state: AppState(),
-                          middlewares: [moviesMiddleware()])
+        let store = Store(reducer: appReducer, state: AppState(), middlewares: [restroomMiddleware()])
 
         WindowGroup {
-            ContentView().environmentObject(store)
+            HomeScreen().environmentObject(store)
         }
     }
 }

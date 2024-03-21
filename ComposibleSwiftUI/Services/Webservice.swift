@@ -8,33 +8,31 @@
 import Foundation
 
 enum NetworkError: Error {
-    case badURL
+    case badUrl
     case decodingError
     case noData
 }
 
 class Webservice {
 
-    func getMoviesBy(search: String, completion: @escaping (Result<[Movie]?, NetworkError>) -> Void) {
+    func getRestroomsByLatAndLng(lat: Double, lng: Double, completion: @escaping (Result<[Restroom]?, NetworkError>) -> Void) {
 
-        guard let moviesURL = URL(string: Constants.Urls.urlBySearch(search: search)) else {
-            completion(.failure(.badURL))
+        print(Constants.Urls.restroomsByLatAndLng(lat: lat, lng: lng))
+
+        guard let resourceURL = URL(string: Constants.Urls.restroomsByLatAndLng(lat: lat, lng: lng)) else {
+            completion(.failure(.badUrl))
             return
         }
 
-        URLSession.shared.dataTask(with: moviesURL) { data, response, error in
+        URLSession.shared.dataTask(with: resourceURL) { data, response, error in
 
             guard let data = data, error == nil else {
                 completion(.failure(.noData))
                 return
             }
 
-            let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: data)
-            if let movieResponse = movieResponse {
-                completion(.success(movieResponse.movies))
-            } else {
-                completion(.failure(.decodingError))
-            }
+            let restrooms = try? JSONDecoder().decode([Restroom].self, from: data)
+            completion(.success(restrooms))
 
         }.resume()
 

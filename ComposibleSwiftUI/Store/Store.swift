@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 typealias Dispatcher = (Action) -> Void
 
 typealias Reducer<State: ReduxState> = (_ state: State, _ action: Action) -> State
@@ -17,22 +15,13 @@ typealias Middleware<StoreState: ReduxState> = (StoreState, Action, @escaping Di
 protocol ReduxState { }
 
 struct AppState: ReduxState {
-   var movies = MoviesState()
+    var restrooms: RestroomState = RestroomState()
 }
 
-struct MoviesState: ReduxState {
-    var movies = [Movie]()
+struct RestroomState: ReduxState {
+    var restrooms: [Restroom] = []
 }
 
-protocol Action { }
-
-struct FetchMovies: Action {
-    let search: String
-}
-
-struct SetMovies: Action {
-    let movies: [Movie]
-}
 
 class Store<StoreState: ReduxState>: ObservableObject {
 

@@ -9,6 +9,10 @@ import Foundation
 
 extension String {
 
+    func encodeURL() -> String? {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+    }
+
     func urlEncode() -> String {
         self.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? self
     }
