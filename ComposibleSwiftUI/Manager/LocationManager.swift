@@ -23,6 +23,10 @@ class LocationManager: NSObject, ObservableObject {
         locationManager.startUpdatingLocation()
     }
 
+    func updateLocation() {
+        locationManager.startUpdatingLocation()
+    }
+
 }
 
 extension LocationManager: CLLocationManagerDelegate {
